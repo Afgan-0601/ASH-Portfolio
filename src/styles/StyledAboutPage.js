@@ -16,7 +16,7 @@ padding: 0;
 overflow-x: hidden;
 display: flex;
 flex-direction: column;
-opacity: ${props => (props.menu === 1 ? '.3' : 1)};
+opacity: ${(props) => (props.menu === 1 ? '.3' : 1)};
 transition: .3s ease all;
 
 .title {
@@ -92,7 +92,7 @@ transition: .3s ease all;
   }
 
   .card {
-    width: 100%;
+    width: 90%;
 
     img {
       width: 70%;

@@ -10,6 +10,7 @@ import Menu from './components/Menu'
 import SocialMedia from './components/SocialMedia'
 import ContactPage from './pages/Contact'
 import UiTesting from './pages/UiTesting'
+import CiCd from './pages/CiCd'
 import ApiTesting from './pages/ApiTesting'
 import BlogPage from './pages/BlogPage'
 import SinglePost from './pages/SinglePost'
@@ -35,7 +36,17 @@ function App() {
   }
 
   return (
-    <DispatchContext.Provider value={{ setMenu, setHome, setPortfolio, setBlog, setAbout, setContact, toggleMenu }}>
+    <DispatchContext.Provider
+      value={{
+        setMenu,
+        setHome,
+        setPortfolio,
+        setBlog,
+        setAbout,
+        setContact,
+        toggleMenu,
+      }}
+    >
       <Context.Provider value={{ menu, home, portfolio, blog, about, contact }}>
         <Router>
           <Navigation />
@@ -55,6 +66,9 @@ function App() {
             </Route>
             <Route path="/api-testing" exact>
               <ApiTesting />
+            </Route>
+            <Route path="/ci-cd" exact>
+              <CiCd />
             </Route>
             <Route path="/blog" exact>
               <BlogPage />

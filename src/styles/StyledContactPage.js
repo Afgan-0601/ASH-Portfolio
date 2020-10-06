@@ -10,9 +10,9 @@ padding: 0;
 overflow-x: hidden;
 display: flex;
 flex-direction: column;
-opacity: ${props => (props.menu === 1 ? '.3' : 1)};
+opacity: ${(props) => (props.menu === 1 ? '.3' : 1)};
 transition: .3s ease all;
-
+overflow-x: hidden;
 
 .title {
   width: 70%;
@@ -137,6 +137,60 @@ form {
 
 }
 
+@media screen and (max-width: 800px) {
+  .card {
+    .second-row {
+      h1 {
+        width: 80%;
+        text-align: center;
+      }
+      form {
+        width: 80%;
+      }
+    }
+  }
+}
 
+@media screen and (max-width: 400px) {
+  .card {
+    width: 100%;
+    .first-row {
+      display: flex;
+      flex-direction: column;
+
+      .left-side {
+        width: 100%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+
+        img {
+          width: 80%;
+        }
+      }
+      .right-side {
+        width: 100%;
+
+        ul {
+          margin: 0;
+          padding: 25px;
+        }
+      }
+    }
+
+
+    .second-row {
+      h1 {
+        width: 80%;
+        text-align: center;
+      }
+      form {
+        width: 80%;
+      }
+    }
+  }
+
+
+}
 
 `

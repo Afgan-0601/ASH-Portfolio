@@ -13,11 +13,12 @@ align-items: center;
 justify-content: center;
 padding: 100px 0;
 font-family: "Open Sans", sans-serif;
-opacity: ${props => (props.menu === 1 ? '.3' : 1)};
+opacity: ${(props) => (props.menu === 1 ? '.3' : 1)};
 transition: .3s ease all;
 
 .card {
-  width: 80%;
+  width: 70%;
+  max-width: 1200px;
   margin-top: 50px;
   .text, .title{
     h1 {
@@ -131,6 +132,13 @@ transition: .3s ease all;
 
   }
 }
+}
+
+
+@media screen and (max-width: 400px) {
+  .card {
+      width: 80%;
+  }
 }
 
 `
