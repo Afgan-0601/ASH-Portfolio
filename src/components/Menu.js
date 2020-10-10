@@ -7,8 +7,8 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faTimes } from '@fortawesome/free-solid-svg-icons'
 
 const Menu = () => {
-  const { setMenu, setHome, setPortfolio, setBlog, setContact, setAbout, toggleMenu } = useContext(DispatchContext)
-  const { menu, home, portfolio, blog, contact, about } = useContext(Context)
+  const { setMenu} = useContext(DispatchContext)
+  const { menu} = useContext(Context)
 
   return (
     <StyledMenu menu={menu}>

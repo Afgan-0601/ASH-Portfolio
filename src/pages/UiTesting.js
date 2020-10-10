@@ -3,22 +3,24 @@ import { Helmet } from 'react-helmet'
 import Context from '../context/Context'
 import DispatchContext from '../context/DispatchContext'
 import { StyledUiTesting } from '../styles/StyledUiTesting'
-import Illustration1 from '../images/uifirst.svg'
-import Illustration2 from '../images/apitesting2.svg'
-import Illustration3 from '../images/apitesting3.svg'
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
-import { faCircle } from '@fortawesome/free-solid-svg-icons'
+import Img1 from '../images/uitesting1.svg'
+import Img2 from '../images/uitesting2.svg'
+import Img3 from '../images/uitesting3.png'
+import Img4 from '../images/uitesting4.png'
+import Img5 from '../images/uitesting5.png'
+import Img6 from '../images/uitesting6.png'
+
+
 
 const UiTesting = () => {
   const {
-    setMenu,
     setHome,
     setPortfolio,
     setBlog,
     setContact,
     setAbout,
   } = useContext(DispatchContext)
-  const { menu, home, portfolio, blog, contact, about } = useContext(Context)
+  const { menu} = useContext(Context)
 
   useEffect(() => {
     setAbout(0)
@@ -46,7 +48,7 @@ const UiTesting = () => {
             customer interactions, order processing, and transaction processing.
           </p>
           <div className="image image1">
-            <h1>Here Will be the graphic</h1>
+            <img className='image-normal' src={Img1} alt="illustration"/>
           </div>
         </div>
       </div>
@@ -111,7 +113,7 @@ const UiTesting = () => {
           </p>
         </div>
         <div className="image">
-          <img src={Illustration1} />
+          <img className='image-normal' src={Img2} alt="illustration"/>
         </div>
       </div>
       <div className="card card4">
@@ -125,7 +127,7 @@ const UiTesting = () => {
             challenges.
           </p>
           <div className="image">
-            <img src={Illustration3} />
+            <img className='image-full'  src={Img3} alt="illustration"/>
           </div>
         </div>
       </div>
@@ -187,7 +189,7 @@ const UiTesting = () => {
           <h1>How to Overcome Web UI Automation Challenges?</h1>
         </div>
         <div className="image">
-          <h1>Here will be a picture</h1>
+          <img className='image-full' src={Img4} alt="illustration"/>
         </div>
         <div className="text">
           <h3>1. Choose right UI test automation tool:</h3>
@@ -239,7 +241,7 @@ const UiTesting = () => {
           </h1>
         </div>
         <div className="image">
-          <h1>Here will be a picture</h1>
+        <img className='image-full' src={Img5} alt="illustration"/>
         </div>
         <div className="text">
           <h3>1. Eases image comparison process:</h3>
@@ -290,7 +292,7 @@ const UiTesting = () => {
           <h1>Some of the leading Web UI Automation Testing Tools</h1>
         </div>
         <div className="image">
-          <h1>Here will be an image</h1>
+        <img className='image-full' src={Img6} alt="illustration"/>
         </div>
         <div className="text">
           <h3>1. Selenium:</h3>
@@ -380,9 +382,6 @@ const UiTesting = () => {
       <div className="card card10">
         <div className="text">
           <h1>Related Queries on UI Testing</h1>
-        </div>
-        <div className="image">
-          <h1>Here will be an image</h1>
         </div>
         <div className="text">
           <h3>1. What is UI testing?</h3>

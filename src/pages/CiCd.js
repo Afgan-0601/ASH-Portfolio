@@ -3,20 +3,18 @@ import { Helmet } from 'react-helmet'
 import Context from '../context/Context'
 import DispatchContext from '../context/DispatchContext'
 import { StyledCiCd } from '../styles/StyledCiCd'
-import Illustration1 from '../images/uifirst.svg'
 
-import Illustration3 from '../images/apitesting3.svg'
 
 const CiCd = () => {
   const {
-    setMenu,
+    setLoading,
     setHome,
     setPortfolio,
     setBlog,
     setContact,
     setAbout,
   } = useContext(DispatchContext)
-  const { menu, home, portfolio, blog, contact, about } = useContext(Context)
+  const { menu, loading} = useContext(Context)
 
   useEffect(() => {
     setAbout(0)

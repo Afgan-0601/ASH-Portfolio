@@ -14,6 +14,7 @@ import CiCd from './pages/CiCd'
 import ApiTesting from './pages/ApiTesting'
 import BlogPage from './pages/BlogPage'
 import SinglePost from './pages/SinglePost'
+import Loading from './components/Loading'
 
 function App() {
   // controlling the movement of menu boxes
@@ -25,6 +26,7 @@ function App() {
   const [blog, setBlog] = useState(0)
   const [about, setAbout] = useState(0)
   const [contact, setContact] = useState(0)
+  const [loading, setLoading] = useState(false)
 
   // toggling menu
   const toggleMenu = () => {
@@ -45,10 +47,12 @@ function App() {
         setAbout,
         setContact,
         toggleMenu,
+        setLoading
       }}
     >
-      <Context.Provider value={{ menu, home, portfolio, blog, about, contact }}>
+      <Context.Provider value={{ menu, home, portfolio, blog, about, contact, loading }}>
         <Router>
+        {loading && <Loading/>}
           <Navigation />
           <Menu />
           <Switch>

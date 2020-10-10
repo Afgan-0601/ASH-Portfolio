@@ -7,8 +7,8 @@ import BlogBox from '../components/BlogBox'
 import blogposts from '../data/blogposts'
 
 const BlogPage = () => {
-  const { setMenu, setHome, setPortfolio, setBlog, setContact, setAbout } = useContext(DispatchContext)
-  const { menu, home, portfolio, blog, contact, about } = useContext(Context)
+  const { setLoading, setHome, setPortfolio, setBlog, setContact, setAbout } = useContext(DispatchContext)
+  const { menu, loading } = useContext(Context)
 
   useEffect(() => {
     setAbout(0)

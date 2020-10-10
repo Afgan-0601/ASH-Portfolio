@@ -8,8 +8,8 @@ import { StyledIndexPage } from '../styles/StyledIndexPage'
 import Illustration from '../images/frontpage.svg'
 
 const IndexPage = () => {
-  const { setMenu, setHome, setPortfolio, setBlog, setContact, setAbout, toggleMenu } = useContext(DispatchContext)
-  const { menu, home, portfolio, blog, contact, about } = useContext(Context)
+  const { setLoading, setHome, setPortfolio, setBlog, setContact, setAbout, toggleMenu } = useContext(DispatchContext)
+  const { menu, loading} = useContext(Context)
 
   useEffect(() => {
     setHome(1)

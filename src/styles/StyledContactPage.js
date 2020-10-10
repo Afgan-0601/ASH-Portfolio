@@ -87,6 +87,16 @@ ul {
   align-items: center;
   padding: 30px 0;
 
+  .success {
+    color: green;
+    width: 100%;
+    font-weight: 600;
+    font-size: 12px;
+    opacity: 1;
+    text-align: center;
+
+  }
+
 h1 {
   color: ${detailColor};
   text-transform: uppercase;
@@ -97,6 +107,20 @@ form {
   display: flex;
   flex-direction: column;
   width: 60%;
+  position: relative;
+
+  .flash-msg {
+    position: absolute;
+    top: -6%;
+    left: 0;
+    color: ${props => (props.error ? 'tomato' : 'green;')};
+    width: 100%;
+    font-weight: 600;
+    font-size: 12px;
+    opacity: 1;
+    text-align: center;
+
+  }
 
   input, textarea {
     margin: 10px 0;
@@ -127,6 +151,7 @@ form {
     border-style: none;
     background: ${detailColor};
     color: white;
+    cursor: pointer;
   }
 
   button:focus, button:active {

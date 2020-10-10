@@ -1,17 +1,29 @@
-import React, { useContext, useEffect } from 'react'
+import React, { useContext, useEffect, useState } from 'react'
 import { Helmet } from 'react-helmet'
 import Context from '../context/Context'
 import DispatchContext from '../context/DispatchContext'
 import { StyledAboutPage } from '../styles/StyledAboutPage'
 import Illustration from '../images/aboutme.svg'
-import SocialMedia from '../components/SocialMedia'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faCircle } from '@fortawesome/free-solid-svg-icons'
-import Loading from '../components/Loading'
+
 
 const AboutPage = () => {
-  const { setMenu, setHome, setPortfolio, setBlog, setContact, setAbout } = useContext(DispatchContext)
-  const { menu, home, portfolio, blog, contact, about } = useContext(Context)
+  const { setHome, setPortfolio, setBlog, setContact, setAbout, setLoading } = useContext(DispatchContext)
+  const { menu } = useContext(Context)
+
+  const [loadedImages, setLoadedImages] = useState(0)
+
+
+  const countTimes = () => {
+    setLoadedImages(loadedImages + 1)
+  }
+
+  useEffect(() => {
+    if (loadedImages === 1) {
+      setLoading(false)
+    }
+  }, [loadedImages])
 
   useEffect(() => {
     setAbout(1)
@@ -22,6 +34,7 @@ const AboutPage = () => {
   }, [])
 
   return (
+    <div style={{ visibility: loadedImages === 1 ? 'visible' : 'hidden' }}>
     <StyledAboutPage menu={menu}>
       <Helmet>
         <title> Portfolio | About Me</title>
@@ -33,7 +46,7 @@ const AboutPage = () => {
           <h1>About Me</h1>
         </div>
         <div className="card">
-          <img src={Illustration} alt="" />
+          <img src={Illustration} alt="" onLoad={countTimes} />
 
           <ul>
             <li>
@@ -99,6 +112,7 @@ const AboutPage = () => {
         </div>
       </div>
     </StyledAboutPage>
+    </div>
   )
 }
 
