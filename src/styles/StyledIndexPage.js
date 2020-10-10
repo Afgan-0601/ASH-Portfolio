@@ -4,7 +4,7 @@ import { detailColor, black } from './GlobalStyle'
 export const StyledIndexPage = Styled.div`
 
 
-width: 100%;
+width: 100vw;
 height: 100vh;
 margin: 0;
 padding: 0;
@@ -83,10 +83,15 @@ transition: .3s ease all;
   align-items: center;
 
   img {
-    width: 85%;
+    width: 80%;
   }
 }
 
+@media screen and (min-width: 1920px) {
+width: 80vw;
+margin: auto;
+
+}
 
 @media screen and (max-width: 1025px) {
   flex-direction: column;

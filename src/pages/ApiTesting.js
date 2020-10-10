@@ -3,9 +3,10 @@ import Context from '../context/Context'
 import DispatchContext from '../context/DispatchContext'
 import { StyledApiTesting } from '../styles/StyledApiTesting'
 import { Helmet } from 'react-helmet'
-import Illustration1 from '../images/apitesting1.svg'
 import Illustration2 from '../images/apitesting2.svg'
 import Illustration3 from '../images/apitesting3.svg'
+import Img1 from '../images/apitesting4.png'
+import Img2 from '../images/apitesting5.png'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faCircle } from '@fortawesome/free-solid-svg-icons'
 
@@ -36,7 +37,7 @@ const ApiTesting = () => {
           <p>In simple words, API stands for Application Programming Interface. API acts as an interface between two software applications and allows the two software applications to communicate with each other. API is a collection of software functions that can be executed by another software program. Protocols: A format for transmitting data between two systems.</p>
           <p>Let’s see some examples of an API in a more approachable way.</p>
           <div className="image image1">
-            <h1>Here Will be the graphic</h1>
+            <img src={Img1} alt=""/>
           </div>
         </div>
       </div>
@@ -140,7 +141,7 @@ const ApiTesting = () => {
       </div>
       <div className="card card7">
         <div className="image">
-          <h1>Here will be a picture</h1>
+          <img src={Img2} alt=""/>
         </div>
         <div className="text">
           <h1>API Testing</h1>

@@ -69,6 +69,12 @@ transition: .3s ease all;
   }
 }
 
+
+@media screen and (min-width: 1920px) {
+  width: 80%;
+  margin: auto;
+  }
+
 @media screen and (max-width: 1025px) { 
 
   .title {

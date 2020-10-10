@@ -3,6 +3,17 @@ import { Helmet } from 'react-helmet'
 import Context from '../context/Context'
 import DispatchContext from '../context/DispatchContext'
 import { StyledCiCd } from '../styles/StyledCiCd'
+import Img1 from '../images/cicd1.png'
+import Img2 from '../images/cicd2.png'
+import Img3 from '../images/cdci3.png'
+import Img4 from '../images/cdci4.png'
+import Img5 from '../images/cdci5.png'
+import Img6 from '../images/cdci6.png'
+import Img7 from '../images/cdci7.png'
+import Img8 from '../images/cdci8.png'
+import Img9 from '../images/cdci9.png'
+import Img11 from '../images/cicd11.png'
+import Img12 from '../images/cicd12.png'
 
 
 const CiCd = () => {
@@ -49,7 +60,7 @@ const CiCd = () => {
             by understanding DevOps.
           </p>
           <div className="image image1">
-            <h1>Here Will be the graphic</h1>
+          <img src={Img1} alt=""/>
           </div>
         </div>
       </div>
@@ -73,7 +84,7 @@ const CiCd = () => {
           </p>
         </div>
         <div className="image image1">
-          <h1>Here Will be the graphic</h1>
+         <img src={Img2} alt=""/>
         </div>
       </div>
       <div className="card card3">
@@ -89,7 +100,7 @@ const CiCd = () => {
           </p>
         </div>
         <div className="image">
-          <h1>Here will be the graphic.</h1>
+        <img src={Img3} alt=""/>
         </div>
         <div className="text">
           <p>
@@ -110,7 +121,7 @@ const CiCd = () => {
           </p>
         </div>
         <div className="image">
-          <h1>Here will be the graphic.</h1>
+        <img src={Img4} alt=""/>
         </div>
         <div className="text">
           <p>
@@ -123,7 +134,7 @@ const CiCd = () => {
           </p>
         </div>
         <div className="image">
-          <h1>Here will be the graphic.</h1>
+        <img src={Img5} alt=""/>
         </div>
         <div className="text">
           <p>
@@ -134,7 +145,7 @@ const CiCd = () => {
           </p>
         </div>
         <div className="image">
-          <h1>Here will be the graphic.</h1>
+        <img src={Img6} alt=""/>
         </div>
         <div className="text">
           <p>
@@ -144,7 +155,7 @@ const CiCd = () => {
           </p>
         </div>
         <div className="image">
-          <h1>Here will be the graphic.</h1>
+        <img src={Img7} alt=""/>
         </div>
         <div className="text">
           <p>
@@ -154,7 +165,7 @@ const CiCd = () => {
           </p>
         </div>
         <div className="image">
-          <h1>Here will be the graphic.</h1>
+        <img src={Img8} alt=""/>
         </div>
         <div className="text">
           <p>
@@ -170,7 +181,7 @@ const CiCd = () => {
           </p>
         </div>
         <div className="image">
-          <h1>Here will be the graphic.</h1>
+        <img src={Img9} alt=""/>
         </div>
         <div className="text">
           <p>
@@ -194,7 +205,7 @@ const CiCd = () => {
           </p>
         </div>
         <div className="image">
-          <h1>Here will be the graphic.</h1>
+          <img src={Img11} alt=""/>
         </div>
         <div className="text">
           <p>
@@ -223,7 +234,7 @@ const CiCd = () => {
           </p>
         </div>
         <div className="image">
-          <h1>Here will be the graphic.</h1>
+        <img src={Img12} alt=""/>
         </div>
         <div className="text">
           <p>

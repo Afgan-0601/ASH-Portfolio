@@ -7,6 +7,9 @@ export const StyledUiTesting = Styled.div`
   box-sizing: border-box;
 }
 
+
+width: 100%;
+height: 100%;
 display: flex;
 flex-direction: column;
 align-items: center;
@@ -58,6 +61,10 @@ transition: .3s ease all;
 }
 
 
+@media screen and (min-width: 1920px) {
+  width: 80%;
+  margin: auto;
+  }
 
 @media screen and (max-width: 500px) {
 

@@ -33,6 +33,10 @@ padding-bottom: 50px;
   }
 }
 
+@media screen and (min-width: 1920px) {
+  width: 80%;
+  margin: auto;
+  }
 
 
 

@@ -7,6 +7,8 @@ export const StyledCiCd = Styled.div`
     box-sizing: border-box;
   }
   
+  width: 100%;
+  height: 100%;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -19,7 +21,7 @@ export const StyledCiCd = Styled.div`
   .card {
     width: 70%;
     max-width: 1200px;
-    margin-top: 50px;
+ 
     .text, .title{
       h1 {
         color: ${detailColor};
@@ -41,13 +43,36 @@ export const StyledCiCd = Styled.div`
   
     }
   
-  
+  .image {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 30px 0;
+
+    img {
+      width: 80%;
+    }
+  }
     
   }
+
+  @media screen and (min-width: 1920px) {
+    width: 80%;
+    margin: auto;
+    }
 
   @media screen and (max-width: 400px) {
       .card {
           width: 80%;
+
+          .image {
+            width: 100%;
+
+            img {
+              width: 100%;
+            }
+          }
       }
   }
 
