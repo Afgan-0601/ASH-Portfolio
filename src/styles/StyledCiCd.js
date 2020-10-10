@@ -73,6 +73,12 @@ export const StyledCiCd = Styled.div`
               width: 100%;
             }
           }
+
+          .text, .title {
+            h1 {
+              font-size: 20px;
+            }
+          }
       }
   }
 

@@ -4,6 +4,7 @@ export const black = '#2B2B2D'
 export const white = '#ECF0F3'
 export const detailColor = '#9A48D2'
 export const lightDetailColor = '#af76d6'
+export const darkDetailColor = '#7b31ad'
 export const dangerColor = '#db2a50'
 
 export const GlobalStyle = createGlobalStyle`

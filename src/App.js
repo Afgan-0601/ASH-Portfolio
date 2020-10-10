@@ -26,7 +26,7 @@ function App() {
   const [blog, setBlog] = useState(0)
   const [about, setAbout] = useState(0)
   const [contact, setContact] = useState(0)
-  const [loading, setLoading] = useState(false)
+  const [loading, setLoading] = useState(true)
 
   // toggling menu
   const toggleMenu = () => {

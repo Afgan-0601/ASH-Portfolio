@@ -1,5 +1,5 @@
 import Styled from 'styled-components'
-import { detailColor } from './GlobalStyle'
+import { detailColor, darkDetailColor } from './GlobalStyle'
 
 export const StyledSocialMedia = Styled.div`
 
@@ -34,6 +34,11 @@ left: 0;
   .icon {
     font-size: 25px;
     color: ${detailColor};
+    transition: .3s all ease;
+  }
+
+  .icon:hover {
+    color: ${darkDetailColor};
   }
 }
 

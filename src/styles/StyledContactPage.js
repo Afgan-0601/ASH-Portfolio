@@ -1,5 +1,5 @@
 import Styled from 'styled-components'
-import { black, detailColor } from './GlobalStyle'
+import { black, detailColor, darkDetailColor } from './GlobalStyle'
 export const StyledContactPage = Styled.div`
 
 
@@ -147,15 +147,20 @@ form {
   }
 
   button {
-    height: 40px;
+    height: 45px;
     border-style: none;
     background: ${detailColor};
     color: white;
     cursor: pointer;
+    transition: .3s all ease;
   }
 
   button:focus, button:active {
     outline: none;
+  }
+
+  button:hover {
+    background: ${darkDetailColor};
   }
 }
 }

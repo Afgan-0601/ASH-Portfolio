@@ -29,9 +29,13 @@ ul {
 
   li {
     font-size: 13px;
-    font-weight: 600;
-    transition: .2s all ease;
+    font-weight: 700;
+    transition: .3s all ease;
     cursor: pointer;
+  }
+
+  li:hover {
+    color: ${detailColor};
   }
 
   .home {
@@ -59,12 +63,14 @@ ul {
     color: ${black};
   }
 
+
+
 }
 
 .burgerMenu {display: none;}
 .homeIcon {display: none;}
 
-@media screen and (max-width: 500px) {
+@media screen and (max-width: 1200px) {
 
   ul {display: none;}
 

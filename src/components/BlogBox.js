@@ -4,9 +4,9 @@ import { StyledBlogBox } from '../styles/StyledBlogBox'
 
 const BlogBox = ({ id, title, image, content, description }) => {
   return (
-    <StyledBlogBox>
+    <StyledBlogBox image={image}>
       <div className="image">
-        <img src={image} alt="Blog Image" />
+        <img src={image} alt=""/>
       </div>
       <div className="description">
         <h3>{title}</h3>

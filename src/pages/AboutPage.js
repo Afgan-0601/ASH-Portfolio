@@ -31,6 +31,7 @@ const AboutPage = () => {
     setPortfolio(0)
     setBlog(0)
     setContact(0)
+    setLoading(true)
   }, [])
 
   return (

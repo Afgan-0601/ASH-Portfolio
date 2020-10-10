@@ -1,5 +1,5 @@
 import Styled from 'styled-components'
-import { detailColor } from './GlobalStyle'
+import { detailColor, darkDetailColor } from './GlobalStyle'
 
 export const StyledMenu = Styled.div`
 
@@ -36,7 +36,7 @@ font-family: "Open Sans", sans-serif;
   top: -50%;
   z-index: ${props => (props.menu === 1 ? '100' : '-1')};
   border-radius: 50%;
-
+  transition: .3s ease all;
   
   a {
     text-decoration: none;
@@ -45,6 +45,11 @@ font-family: "Open Sans", sans-serif;
     font-weight: 600;
     letter-spacing: 1px;
   }
+}
+
+.box:hover {
+  background: ${darkDetailColor};
+  width: 320px;
 }
 
 .box-1 {

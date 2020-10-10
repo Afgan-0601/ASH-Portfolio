@@ -43,7 +43,7 @@ transition: .3s ease all;
 
 
   img {
-    width: 60%;
+    width: 40%;
     margin: 20px 0;
   }
 

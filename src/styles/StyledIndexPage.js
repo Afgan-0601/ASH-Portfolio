@@ -1,5 +1,5 @@
 import Styled from 'styled-components'
-import { detailColor, black } from './GlobalStyle'
+import { detailColor, black, darkDetailColor } from './GlobalStyle'
 
 export const StyledIndexPage = Styled.div`
 
@@ -33,12 +33,12 @@ transition: .3s ease all;
      
     h1 {
       margin: 0;
-      font-size: 40px;
+      font-size: 50px;
       text-transform: uppercase;
       }
 
     h4 {
-      font-size: 13px;
+      font-size: 15px;
       margin: 2px 0 20px 0;
       letter-spacing: 2.4px;
       color: ${detailColor};
@@ -46,8 +46,8 @@ transition: .3s ease all;
     
     .buttons {
       button {
-        height: 35px;
-        width: 140px;
+        height: 45px;
+        width: 200px;
         margin-left: 10px;
         border-style: none;
         font-weight: 600;
@@ -55,6 +55,8 @@ transition: .3s ease all;
         font-size: 12px;
         letter-spacing: 1px;
         cursor: pointer;
+        transition: .3s all ease;
+   
       }
       button: focus, button:active {
         outline: none;
@@ -64,6 +66,10 @@ transition: .3s ease all;
         color: white;
         background: ${detailColor};
       }
+
+      .portfolio:hover {
+        background: ${darkDetailColor};
+      }
       
       .contact {
         color: ${detailColor};
@@ -71,6 +77,10 @@ transition: .3s ease all;
         border: 2px solid ${detailColor};
         font-weight: 700;
       }  
+      .contact:hover {
+        border: 2px solid ${darkDetailColor};
+        color: ${darkDetailColor};
+      }
     }
   }
 }
@@ -79,7 +89,7 @@ transition: .3s ease all;
   width: 50%;
   height: 100%;
   display: flex;
-  justify-content: center;
+  justify-content: flex-start;
   align-items: center;
 
   img {
@@ -90,7 +100,6 @@ transition: .3s ease all;
 @media screen and (min-width: 1920px) {
 width: 80vw;
 margin: auto;
-
 }
 
 @media screen and (max-width: 1025px) {
@@ -104,7 +113,7 @@ margin: auto;
       margin-bottom: 10%;
 
       h1 {
-        font-size:45px;
+        font-size:50px;
       }
 
       .buttons {
@@ -118,7 +127,8 @@ margin: auto;
 
   .right-column {
     width: 80%;
-    align-items: flex-start;
+    align-items: center;
+    justify-content: center;
 
   }
 }
@@ -149,6 +159,8 @@ margin: auto;
 
       .buttons {
       margin-top: 5px;
+      display: flex;
+      flex-direction: column;
         button {
           margin-bottom: 10px;
           margin-left: 0;

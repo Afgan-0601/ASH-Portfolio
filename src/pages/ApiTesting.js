@@ -1,4 +1,4 @@
-import React, { useContext, useEffect } from 'react'
+import React, { useContext, useEffect, useState } from 'react'
 import Context from '../context/Context'
 import DispatchContext from '../context/DispatchContext'
 import { StyledApiTesting } from '../styles/StyledApiTesting'
@@ -9,10 +9,24 @@ import Img1 from '../images/apitesting4.png'
 import Img2 from '../images/apitesting5.png'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faCircle } from '@fortawesome/free-solid-svg-icons'
+import ScrollUpButton from '../components/ScrollUpButton'
 
 const ApiTesting = () => {
   const { setLoading, setHome, setPortfolio, setBlog, setContact, setAbout } = useContext(DispatchContext)
   const { menu, loading} = useContext(Context)
+
+  const [loadedImages, setLoadedImages] = useState(0)
+
+
+  const countTimes = () => {
+    setLoadedImages(loadedImages + 1)
+  }
+
+  useEffect(() => {
+    if (loadedImages === 4) {
+      setLoading(false)
+    }
+  }, [loadedImages])
 
   useEffect(() => {
     setAbout(0)
@@ -20,9 +34,11 @@ const ApiTesting = () => {
     setPortfolio(1)
     setBlog(0)
     setContact(0)
+    setLoading(true)
   }, [])
 
   return (
+    <div style={{ visibility: loadedImages === 4 ? 'visible' : 'hidden' }}>
     <StyledApiTesting menu={menu}>
       <Helmet>
         <title>Portfolio | API Testing </title>
@@ -37,7 +53,7 @@ const ApiTesting = () => {
           <p>In simple words, API stands for Application Programming Interface. API acts as an interface between two software applications and allows the two software applications to communicate with each other. API is a collection of software functions that can be executed by another software program. Protocols: A format for transmitting data between two systems.</p>
           <p>Let’s see some examples of an API in a more approachable way.</p>
           <div className="image image1">
-            <img src={Img1} alt=""/>
+            <img src={Img1} alt="" onLoad={countTimes}/>
           </div>
         </div>
       </div>
@@ -72,12 +88,12 @@ const ApiTesting = () => {
           </ul>
         </div>
         <div className="image">
-          <img src={Illustration2} />
+          <img src={Illustration2} onLoad={countTimes}/>
         </div>
       </div>
       <div className="card card4">
         <div className="image">
-          <img src={Illustration3} />
+          <img src={Illustration3} onLoad={countTimes}/>
         </div>
         <div className="text">
           <h3>Advantages of API Testing:</h3>
@@ -141,7 +157,7 @@ const ApiTesting = () => {
       </div>
       <div className="card card7">
         <div className="image">
-          <img src={Img2} alt=""/>
+          <img src={Img2} alt="" onLoad={countTimes}/>
         </div>
         <div className="text">
           <h1>API Testing</h1>
@@ -208,7 +224,9 @@ const ApiTesting = () => {
           </ul>
         </div>
       </div>
+      <ScrollUpButton/>
     </StyledApiTesting>
+    </div>
   )
 }
 

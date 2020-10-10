@@ -1,4 +1,4 @@
-import React, { useContext, useEffect } from 'react'
+import React, { useContext, useEffect, useState } from 'react'
 import { Link } from 'react-router-dom'
 import { Helmet } from 'react-helmet'
 import Context from '../context/Context'
@@ -17,9 +17,24 @@ const IndexPage = () => {
     setBlog(0)
     setContact(0)
     setAbout(0)
+    setLoading(true)
   }, [])
 
+  const [loadedImages, setLoadedImages] = useState(0)
+
+
+  const countTimes = () => {
+    setLoadedImages(loadedImages + 1)
+  }
+
+  useEffect(() => {
+    if (loadedImages === 1) {
+      setLoading(false)
+    }
+  }, [loadedImages])
+
   return (
+    <div style={{ visibility: loadedImages === 1 ? 'visible' : 'hidden' }}>
     <StyledIndexPage menu={menu}>
       <Helmet>
         <title>Portfolio | Homepage</title>
@@ -41,9 +56,10 @@ const IndexPage = () => {
         </div>
       </div>
       <div className="right-column">
-        <img src={Illustration} alt="" />
+        <img src={Illustration} alt="" onLoad={countTimes}/>
       </div>
     </StyledIndexPage>
+</div>
   )
 }
 

@@ -147,6 +147,12 @@ transition: .3s ease all;
 @media screen and (max-width: 400px) {
   .card {
       width: 80%;
+
+      .text, .title {
+        h1 {
+          font-size: 20px;
+        }
+      }
   }
 }
 

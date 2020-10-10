@@ -14,6 +14,7 @@ import Img8 from '../images/cdci8.png'
 import Img9 from '../images/cdci9.png'
 import Img11 from '../images/cicd11.png'
 import Img12 from '../images/cicd12.png'
+import ScrollUpButton from '../components/ScrollUpButton'
 
 
 const CiCd = () => {
@@ -33,9 +34,24 @@ const CiCd = () => {
     setPortfolio(1)
     setBlog(0)
     setContact(0)
+    setLoading(true)
   }, [])
 
+  const [loadedImages, setLoadedImages] = useState(0)
+
+
+  const countTimes = () => {
+    setLoadedImages(loadedImages + 1)
+  }
+
+  useEffect(() => {
+    if (loadedImages === 11) {
+      setLoading(false)
+    }
+  }, [loadedImages])
+
   return (
+    <div style={{ visibility: loadedImages === 11 ? 'visible' : 'hidden' }}>
     <StyledCiCd menu={menu}>
       <Helmet>
         <title>Portfolio | CI/CD </title>
@@ -60,7 +76,7 @@ const CiCd = () => {
             by understanding DevOps.
           </p>
           <div className="image image1">
-          <img src={Img1} alt=""/>
+          <img src={Img1} alt="" onLoad={countTimes}/>
           </div>
         </div>
       </div>
@@ -84,7 +100,7 @@ const CiCd = () => {
           </p>
         </div>
         <div className="image image1">
-         <img src={Img2} alt=""/>
+         <img src={Img2} alt="" onLoad={countTimes}/>
         </div>
       </div>
       <div className="card card3">
@@ -100,7 +116,7 @@ const CiCd = () => {
           </p>
         </div>
         <div className="image">
-        <img src={Img3} alt=""/>
+        <img src={Img3} alt="" onLoad={countTimes}/>
         </div>
         <div className="text">
           <p>
@@ -121,7 +137,7 @@ const CiCd = () => {
           </p>
         </div>
         <div className="image">
-        <img src={Img4} alt=""/>
+        <img src={Img4} alt="" onLoad={countTimes}/>
         </div>
         <div className="text">
           <p>
@@ -134,7 +150,7 @@ const CiCd = () => {
           </p>
         </div>
         <div className="image">
-        <img src={Img5} alt=""/>
+        <img src={Img5} alt="" onLoad={countTimes}/>
         </div>
         <div className="text">
           <p>
@@ -145,7 +161,7 @@ const CiCd = () => {
           </p>
         </div>
         <div className="image">
-        <img src={Img6} alt=""/>
+        <img src={Img6} alt="" onLoad={countTimes}/>
         </div>
         <div className="text">
           <p>
@@ -155,7 +171,7 @@ const CiCd = () => {
           </p>
         </div>
         <div className="image">
-        <img src={Img7} alt=""/>
+        <img src={Img7} alt="" onLoad={countTimes}/>
         </div>
         <div className="text">
           <p>
@@ -165,7 +181,7 @@ const CiCd = () => {
           </p>
         </div>
         <div className="image">
-        <img src={Img8} alt=""/>
+        <img src={Img8} alt="" onLoad={countTimes}/>
         </div>
         <div className="text">
           <p>
@@ -181,7 +197,7 @@ const CiCd = () => {
           </p>
         </div>
         <div className="image">
-        <img src={Img9} alt=""/>
+        <img src={Img9} alt="" onLoad={countTimes}/>
         </div>
         <div className="text">
           <p>
@@ -205,7 +221,7 @@ const CiCd = () => {
           </p>
         </div>
         <div className="image">
-          <img src={Img11} alt=""/>
+          <img src={Img11} alt="" onLoad={countTimes}/>
         </div>
         <div className="text">
           <p>
@@ -234,7 +250,7 @@ const CiCd = () => {
           </p>
         </div>
         <div className="image">
-        <img src={Img12} alt=""/>
+        <img src={Img12} alt="" onLoad={countTimes}/>
         </div>
         <div className="text">
           <p>
@@ -254,7 +270,9 @@ const CiCd = () => {
           </p>
         </div>
       </div>
+      <ScrollUpButton/>
     </StyledCiCd>
+    </div>
   )
 }
 

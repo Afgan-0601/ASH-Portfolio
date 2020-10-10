@@ -55,14 +55,16 @@ const ContactPage = () => {
     }, 2800)
   }, [success])
 
-  const formSubmit = x => {
-    x.preventDefault()
+
+
+  const submitForm = e => {
+    e.preventDefault()
     if (name === '' || email === '' || message === '') {
       setError(true)
       setErrorText('Please, fill all the input fields. ')
     } else {
-      // sendInfo()
-      emailjs.sendForm('gmail', 'portfolio', x.target, 'user_h4Q1w3EOmf1x7pPQIXfud').then(
+    
+      emailjs.sendForm('service_gct86wm', 'template_cepo1pe', e.target, 'user_ytOsZw3wu2sFCQu7Kp2it').then(
         result => {
           console.log(result.text)
           setSuccess(true)
@@ -113,7 +115,7 @@ const ContactPage = () => {
           <h1>Let's work and grow together.</h1>
        
          {!success && (
-            <form onSubmit={formSubmit}>
+            <form onSubmit={submitForm} action="#" autoComplete="off">
             {error ? <p className="flash-msg"> {errorText}</p> : null}
               <input type="text" placeholder="Your Name" name="name" value={name} onChange={(input) => setName(input.target.value)} />
               <input type="email" placeholder="Your Email" name="email" value={email} onChange={(input) => setEmail(input.target.value)}/>

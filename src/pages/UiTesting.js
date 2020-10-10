@@ -9,6 +9,7 @@ import Img3 from '../images/uitesting3.png'
 import Img4 from '../images/uitesting4.png'
 import Img5 from '../images/uitesting5.png'
 import Img6 from '../images/uitesting6.png'
+import ScrollUpButton from '../components/ScrollUpButton'
 
 
 
@@ -19,8 +20,9 @@ const UiTesting = () => {
     setBlog,
     setContact,
     setAbout,
+    setLoading
   } = useContext(DispatchContext)
-  const { menu} = useContext(Context)
+  const { menu } = useContext(Context)
 
   useEffect(() => {
     setAbout(0)
@@ -30,7 +32,21 @@ const UiTesting = () => {
     setContact(0)
   }, [])
 
+  const [loadedImages, setLoadedImages] = useState(0)
+
+
+  const countTimes = () => {
+    setLoadedImages(loadedImages + 1)
+  }
+
+  useEffect(() => {
+    if (loadedImages === 6) {
+      setLoading(false)
+    }
+  }, [loadedImages])
+
   return (
+    <div style={{ visibility: loadedImages === 6 ? 'visible' : 'hidden' }}>
     <StyledUiTesting menu={menu}>
       <Helmet>
         <title>Portfolio | UI Testing </title>
@@ -48,7 +64,7 @@ const UiTesting = () => {
             customer interactions, order processing, and transaction processing.
           </p>
           <div className="image image1">
-            <img className='image-normal' src={Img1} alt="illustration"/>
+            <img className='image-normal' src={Img1} alt="illustration" onLoad={countTimes}/>
           </div>
         </div>
       </div>
@@ -113,7 +129,7 @@ const UiTesting = () => {
           </p>
         </div>
         <div className="image">
-          <img className='image-normal' src={Img2} alt="illustration"/>
+          <img className='image-normal' src={Img2} alt="illustration" onLoad={countTimes}/>
         </div>
       </div>
       <div className="card card4">
@@ -127,7 +143,7 @@ const UiTesting = () => {
             challenges.
           </p>
           <div className="image">
-            <img className='image-full'  src={Img3} alt="illustration"/>
+            <img className='image-full'  src={Img3} alt="illustration" onLoad={countTimes}/>
           </div>
         </div>
       </div>
@@ -189,7 +205,7 @@ const UiTesting = () => {
           <h1>How to Overcome Web UI Automation Challenges?</h1>
         </div>
         <div className="image">
-          <img className='image-full' src={Img4} alt="illustration"/>
+          <img className='image-full' src={Img4} alt="illustration" onLoad={countTimes}/>
         </div>
         <div className="text">
           <h3>1. Choose right UI test automation tool:</h3>
@@ -241,7 +257,7 @@ const UiTesting = () => {
           </h1>
         </div>
         <div className="image">
-        <img className='image-full' src={Img5} alt="illustration"/>
+        <img className='image-full' src={Img5} alt="illustration" onLoad={countTimes}/>
         </div>
         <div className="text">
           <h3>1. Eases image comparison process:</h3>
@@ -292,7 +308,7 @@ const UiTesting = () => {
           <h1>Some of the leading Web UI Automation Testing Tools</h1>
         </div>
         <div className="image">
-        <img className='image-full' src={Img6} alt="illustration"/>
+        <img className='image-full' src={Img6} alt="illustration" onLoad={countTimes}/>
         </div>
         <div className="text">
           <h3>1. Selenium:</h3>
@@ -409,7 +425,9 @@ const UiTesting = () => {
           </p>
         </div>
       </div>
+      <ScrollUpButton/>
     </StyledUiTesting>
+    </div>
   )
 }
 
