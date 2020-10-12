@@ -14,9 +14,9 @@ const SocialMedia = () => {
         <a href="#">
           <FontAwesomeIcon className="icon" icon={faFacebookF} />
         </a>
-        <a href="#">
+        {/* <a href="#">
           <FontAwesomeIcon className="icon" icon={faTwitter} />
-        </a>
+        </a> */}
         <a href="#">
           <FontAwesomeIcon className="icon" icon={faGithub} />
         </a>
