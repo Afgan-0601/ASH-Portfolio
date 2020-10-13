@@ -35,7 +35,7 @@ font-family: "Open Sans", sans-serif;
   transform: translatex(-50%);
   top: -50%;
   z-index: ${props => (props.menu === 1 ? '100' : '-1')};
-  border-radius: 50%;
+  border-radius: 5px;
   transition: .3s ease all;
   
   a {
@@ -88,7 +88,7 @@ font-family: "Open Sans", sans-serif;
   .box {
     width: 200px;
     height: 40px;
-    border-radius: 50%;
+
   }
 
   .box-1, .box-2, .box-3, .box-4, .box-5, .box-6 {

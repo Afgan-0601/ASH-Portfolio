@@ -46,8 +46,8 @@ transition: .3s ease all;
     
     .buttons {
       button {
-        height: 45px;
-        width: 200px;
+        height: 43px;
+        width: 180px;
         margin-left: 10px;
         border-style: none;
         font-weight: 600;
@@ -56,6 +56,7 @@ transition: .3s ease all;
         letter-spacing: 1px;
         cursor: pointer;
         transition: .3s all ease;
+        border-radius: 5px;
    
       }
       button: focus, button:active {
@@ -100,6 +101,20 @@ transition: .3s ease all;
 @media screen and (min-width: 1920px) {
 width: 80vw;
 margin: auto;
+}
+
+@media screen and (max-width: 1290px) {
+
+  .left-column {
+  
+    .hero {
+
+      h1 {
+        font-size:40px;
+        text-align: right;
+      }
+
+    }
 }
 
 @media screen and (max-width: 1025px) {
@@ -151,6 +166,8 @@ margin: auto;
       h1 {
         width: 100%;
         font-size: 28px;
+        text-align: center;
+       
       }
 
       h4 {
@@ -193,7 +210,7 @@ margin: auto;
       margin-top: 50%;
 
       h4 {
-        text-align: left;
+        text-align: center;
       }
     }
   }

@@ -27,7 +27,7 @@ left: 0;
   }
 }
 .container{
-  width: 20%;
+  width: 10%;
   display: flex;
   justify-content: space-around;
 

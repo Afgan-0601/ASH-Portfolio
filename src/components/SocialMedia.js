@@ -2,24 +2,21 @@ import React, { useContext } from 'react'
 import { StyledSocialMedia } from '../styles/StyledSocialMedia'
 import Context from '../context/Context'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
-import { faFacebookF, faTwitter, faGithub } from '@fortawesome/free-brands-svg-icons'
+import { faLinkedin, faGithub } from '@fortawesome/free-brands-svg-icons'
 
 const SocialMedia = () => {
-  const { menu, home, portfolio, blog, contact, about } = useContext(Context)
+  const { home} = useContext(Context)
   const date = new Date().getFullYear()
 
   return (
     <StyledSocialMedia home={home}>
       <div className="container">
-        <a href="#">
-          <FontAwesomeIcon className="icon" icon={faFacebookF} />
+        <a href="https://www.linkedin.com/in/afgan-shahguliyev/" target="_blank">
+          <FontAwesomeIcon className="icon" icon={faLinkedin} />
         </a>
-        <a href="#">
-          <FontAwesomeIcon className="icon" icon={faTwitter} />
+        <a href="https://github.com/Afgan-0601" target="_blank">
+        <FontAwesomeIcon className="icon" icon={faGithub} />
         </a> 
-        <a href="#">
-          <FontAwesomeIcon className="icon" icon={faGithub} />
-        </a>
       </div>
       <div className="credit">
         <p>
