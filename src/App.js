@@ -26,7 +26,7 @@ function App() {
   const [blog, setBlog] = useState(0)
   const [about, setAbout] = useState(0)
   const [contact, setContact] = useState(0)
-  const [loading, setLoading] = useState(true)
+  const [loading, setLoading] = useState(false)
 
   // toggling menu
   const toggleMenu = () => {
@@ -47,12 +47,12 @@ function App() {
         setAbout,
         setContact,
         toggleMenu,
-        setLoading
+        setLoading,
       }}
     >
       <Context.Provider value={{ menu, home, portfolio, blog, about, contact, loading }}>
         <Router>
-        {loading && <Loading/>}
+          {loading && <Loading />}
           <Navigation />
           <Menu />
           <Switch>

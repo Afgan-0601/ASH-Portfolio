@@ -1,5 +1,5 @@
 import Styled from 'styled-components'
-import {detailColor, black} from './GlobalStyle'
+import { detailColor, black } from './GlobalStyle'
 
 export const StyledSinglePost = Styled.div`
 
@@ -30,11 +30,12 @@ opacity: ${(props) => (props.menu === 1 ? '.3' : 1)};
         justify-content: center;
         align-items: center;
         margin: 20px 0;
+        z-index: 3000;
 
         img {
-            width: 100%;
+            width: 80%;
             border-radius: 15px;
-            margin: 10px;
+            margin: 20px;
         }
     }
 
@@ -66,6 +67,12 @@ opacity: ${(props) => (props.menu === 1 ? '.3' : 1)};
              padding: 0;
              color: ${black};
          }
+    }
+}
+
+ol {
+    li {
+        margin-top: 15px;
     }
 }
 

@@ -1,8 +1,12 @@
 import Styled from 'styled-components'
-import {white, detailColor, darkDetailColor} from './GlobalStyle'
+import { white, detailColor, darkDetailColor } from './GlobalStyle'
 
 export const StyledScrollUpButton = Styled.div`
 margin-top: 50px;
+width: 100%;
+display: flex;
+justify-content: center;
+align-items: center;
 button {
     height: 60px;
     width: 60px;
